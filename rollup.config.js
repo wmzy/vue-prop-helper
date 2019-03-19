@@ -3,7 +3,6 @@ import pkg from './package.json';
 
 const base = {
   input: 'src/index.js',
-  external: ['lodash'],
   plugins: [
     babel({
       exclude: ['node_modules/**']
@@ -16,9 +15,6 @@ export default [
   {
     ...base,
     output: {
-      globals: {
-        lodash: '_'
-      },
       name: pkg.name,
       file: pkg.browser,
       format: 'umd'

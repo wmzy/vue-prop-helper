@@ -1,41 +1,22 @@
-[![Build Status](https://travis-ci.org/wmzy/lib-starter.svg?branch=master)](https://travis-ci.org/wmzy/lib-starter)
-[![Coverage Status](https://coveralls.io/repos/github/wmzy/lib-starter/badge.svg?branch=master)](https://coveralls.io/github/wmzy/lib-starter?branch=master)
-# lib-starter
+[![Build Status](https://travis-ci.org/wmzy/vue-prop-helper.svg?branch=master)](https://travis-ci.org/wmzy/vue-prop-helper)
+[![Coverage Status](https://coveralls.io/repos/github/wmzy/vue-prop-helper/badge.svg?branch=master)](https://coveralls.io/github/wmzy/vue-prop-helper?branch=master)
+# vue-prop-helper
 
-> Library starter
+> Vue prop validation helper
+
+## Install
+
+```bash
+npm i vue-prop-helper
+```
 
 ## Usage
+```js
+import ph from 'vue-prop-helper';
 
-```bash
-export PROJECT_NAME=new-project-name
-
-git clone --depth=1 https://github.com/wmzy/lib-starter $PROJECT_NAME \
-&& cd $PROJECT_NAME \
-&& rm -rf .git \
-&& git init \
-&& npm i
+props: {
+  firstName: ph.string.required(),
+  lastName: ph(),
+  age: ph.number.default(100)()
+}
 ```
-
-## Workflow
-
-```bash
-# develop
-npm start
-
-# build
-npm run build
-
-# test
-npm test
-
-# commit changes
-npm run commit
-
-# publish
-npm publish
-```
-
-## TODO
-
-* [ ] github pages
-* [ ] generator
